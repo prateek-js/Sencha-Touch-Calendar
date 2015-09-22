@@ -25,7 +25,8 @@ Steps to configure:-
     maxDate: Ext.Date.add(new Date(), Ext.Date.DAY,30)
 
     That's it you are done.
-
+    Note:- you will be able to navigate to that year, month which are in minDate & maxDate range.
+    if you dnt specify minDate and maxDate then it will be free flow calendar and allow to navigate any month or year
     Let me know in case of any modification, issue's feedbacks.
 
     Thanks,
