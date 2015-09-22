@@ -1,0 +1,154 @@
+.ux-date-picker {
+  $bd-color: #272727;
+  $header-color:rgb(57, 60, 67);
+  $header-text: rgb(251,251,251);
+
+  $day-cell-color: rgb(41,46,52);
+  $day-font-color: rgb(251,251,251);
+
+  $body-color: rgb(249,248,236);
+
+  .weekday {
+    position: absolute;
+    margin: -1px 2px;
+    font-size: 7pt;
+  }
+
+  color: $day-font-color;
+  background-color:  $body-color;
+  width: 100%;
+
+  table {
+    width: 100%;
+    position: relative;
+    border-collapse: separate;
+    table-layout: fixed;
+    font-size: 20px;
+  }
+
+  tbody {
+    td {
+      border-bottom: 1px solid $bd-color;
+      &:last-child {
+        border-right: 0px;
+      }
+    }
+  }
+  // cell styles
+  td {
+    font-weight: 100;
+    height: 43px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    background: $day-cell-color;
+
+    &.weekend {
+      background: #2F363D;
+    }
+
+    &.today {
+      $c: #7188a8;
+      color: white;
+      background: #2D4255;
+    }
+
+    &.unselectable {
+      color: #89909A;
+      background: #7C3E3E;
+    }
+
+
+
+    &.selected {
+      $c: #1980e5;
+      color: white;
+      background: rgb(64,106,72);
+    }
+
+    &.today.selected {
+      $c: #1980e5;
+      color: white;
+      background: rgb(64,106,72);
+    }
+
+    &.prevmonth, &.nextmonth {
+      color: #89909A;
+    }
+  }
+
+  thead {
+    background: $header-color;
+
+    th {
+      font-size: 9px;
+      vertical-align: bottom;
+      padding-bottom: 3px;
+      color: $header-text;
+      text-align: center;
+      height: 46px;
+
+      &.goto-prevmonth::before {
+        font-family: "calendarpicker";
+        content: "\e600";
+        cursor: pointer;
+        font-size: 16pt;
+        position: absolute;
+        line-height: 0pt;
+        margin-left: -3px;
+        margin-top: -13px;
+        cursor: pointer;
+      }
+
+      &.goto-nextmonth::before {
+        font-family: "calendarpicker";
+        content: "\e601";
+        cursor: pointer;
+        font-size: 16pt;
+        position: absolute;
+        line-height: 0pt;
+        margin-left: -3px;
+        margin-top: -13px;
+        cursor: pointer;
+      }
+
+      &.goto-prevyear::before {
+        font-family: "calendarpicker";
+        content: "\e602";
+        cursor: pointer;
+        font-size: 16pt;
+        position: absolute;
+        line-height: 0pt;
+        margin-left: -3px;
+        margin-top: -13px;
+        cursor: pointer;
+      }
+
+      &.goto-nextyear::before {
+        font-family: "calendarpicker";
+        content: "\e603";
+        cursor: pointer;
+        font-size: 16pt;
+        position: absolute;
+        line-height: 0pt;
+        margin-left: -3px;
+        margin-top: -13px;
+      }
+
+      .month-year-label {
+        font-size: 17px;
+        font-weight: 400;
+        height: 30px;
+        left: 30%;
+        position: absolute;
+        text-align: center;
+        top: 6px;
+        width: 40%;
+        line-height: 24px;
+        z-index: 999;
+      }
+
+
+    }
+  }
+}
